@@ -1,0 +1,213 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Fontawesome
+//Font Awesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Range Slider
+@import 'bootstrap-slider.css';
+
+.bg-cal{
+    background: #2a2e43;
+}
+.bg-cal-light{
+    background: #454f63;
+}
+.nav-steps{
+    margin: 15px 0 5px;
+    padding: 0 0 5px;
+    list-style: none;
+    border-bottom:1px solid #36394d;
+    li{
+        text-align: center;
+        background: #353a50;
+        border-radius: 5px;
+        padding: 5px 0;
+        width: 32%;
+        span{
+            white-space:nowrap;
+            font-size: 16px;
+        }
+        small{
+            display: block;
+            color: #a4a6b0;
+        }
+        &.active{
+            background: #f7a93c;
+            small{
+                color:#e6e6e6;
+            }
+        }
+        .nav-link{
+            padding: 0.5rem 0.3rem;
+        }
+    }
+}
+.minmax {
+    display: flex;
+    justify-content: space-between;
+}
+.form-control-xl{
+    height: calc(2em + 1rem + 1px);
+    padding: 0.7rem 1.2rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+}
+.btn-xl{
+    padding-top:0.7rem;
+    padding-bottom:0.7rem;
+}
+.banner{
+    position: relative;
+    h1{
+        position: absolute;
+        left: 15px;
+        bottom: 45px;
+        color: #FFF;
+    }
+}
+
+
+// // Chrome
+// input[type=range]{
+//     -webkit-appearance: none;
+//     background: transparent;
+//     width: 100%;
+// }
+
+// input[type=range]::-webkit-slider-runnable-track {
+//     width: 100%;
+//     height: 15px;
+//     background: #626778;
+//     border: none;
+//     border-radius: 5px;
+// }
+// input[type=range].change::-webkit-slider-runnable-track{
+//     background: none;
+// }
+// input[type=range]::-webkit-slider-thumb {
+//     -webkit-appearance: none;
+//     border: none;
+//     height: 25px;
+//     width: 25px;
+//     border-radius: 50px;
+//     background: #FFF;
+//     margin-top: -5px;
+    
+// }
+
+// input[type=range]:focus {
+//     outline: none;
+// }
+
+// // Firefox
+// input[type=range]::-moz-range-track {
+//     width: 100%;
+//     height: 15px;
+//     background: #626778;
+//     border: none;
+//     border-radius: 5px;
+// }
+
+// input[type="range"]::-moz-range-progress {
+//     background: #f7a93c; 
+//     height: 15px;
+//   }
+
+// input[type=range]::-moz-range-thumb {
+//     border: none;
+//     height: 25px;
+//     width: 25px;
+//     border-radius: 50px;
+//     background: #FFF;
+//     margin-top: -5px;
+// }
+
+// /*hide the outline behind the border*/
+// input[type=range]:-moz-focusring{
+//     outline: 1px solid #626778;
+//     outline-offset: -1px;
+// }
+// // IE 10+
+// input[type=range]::-ms-track {
+//     width: 100%;
+//     height: 15px;
+    
+//     /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+//     background: transparent;
+    
+//     /*leave room for the larger thumb to overflow with a transparent border */
+//     border-color: transparent;
+//     border-width: 6px 0;
+
+//     /*remove default tick marks*/
+//     color: transparent;
+// }
+// input[type=range]::-ms-fill-lower {
+//     background: #f7a93c;
+//     border-radius: 5px 0 0 5px;
+// }
+// input[type=range]::-ms-fill-upper {
+//     background: #626778;
+//     border-radius: 5px 0 0 5px;
+// }
+// input[type=range]::-ms-thumb {
+//     border: none;
+//     height: 25px;
+//     width: 25px;
+//     border-radius: 50px;
+//     background: #FFF;
+//     margin-top: -5px;
+// }
+// input[type=range]:focus::-ms-fill-lower {
+//     background: #f7a93c;
+// }
+// input[type=range]:focus::-ms-fill-upper {
+//     background: #626778;
+// }
+
+#sidebar{
+    min-height: calc(100vh - 98px);
+    overflow:hidden;
+    ul{
+        li{
+            border-bottom: 1px solid #e7e7e7;
+            padding-top: 7px ;
+            padding-bottom: 7px ;
+            >a{
+             color: $secondary;
+             display: block;
+            }
+            ul{
+                margin-top: 5px;
+                display: none;
+                li{
+                    padding-left: 14px;
+                    a{
+                        display: block;
+                    }
+                    &:last-child{
+                        border-bottom: 0;
+                    }
+            }
+            }
+            &.active,&.active-route{
+                ul{
+                    display: block;
+                }
+                a{
+                    color: $dark;
+                }
+            }
+        }
+    }
+}
